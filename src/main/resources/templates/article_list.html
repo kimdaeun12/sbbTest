@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>articleList</title>
+</head>
+<body>
+<table>
+    <thead>
+        <th>제목</th>
+        <th>작성일</th>
+    </thead>
+    <tbody>
+    <tr th:each="article : ${articleList}">
+        <td th:text="${article.subject}"></td>
+        <td th:text="${article.createDate}"></td>
+    </tr>
+    </tbody>
+</table>
+<form action="#">
+    <button><a href="http://localhost:8000/article/create"></a>등록하긔</button>
+</form>
+</body>
+</html>
