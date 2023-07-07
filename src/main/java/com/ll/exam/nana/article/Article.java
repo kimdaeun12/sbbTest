@@ -1,6 +1,5 @@
 package com.ll.exam.nana.article;
 
-import com.ll.exam.nana.answer.Answer;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,8 +22,5 @@ public class Article {
     private String content;
 
     private LocalDateTime createDate;
-
-    @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
-    private List<Answer> answerList;
 
 }
